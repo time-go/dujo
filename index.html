@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>cui</title>
+    <link href="css/cui.css" type="text/css" rel="stylesheet">
+    <link href="css/base.css" type="text/css" rel="stylesheet">
+    <script src="js/cui.core.js" ></script>
+    <script src="js/cui.page.js" ></script>
+    <script src="js/cui.ui.js" ></script>
+</head>
+<body>
+<div id="webApp">
+    <!--内容-->
+</div>
+<footer>
+    <a class="ion-ios7-home-outline">主页</a>
+    <a class="ion-ios7-timer-outline">核心</a>
+    <a class="ion-ios7-bookmarks-outline">ui</a>
+    <a class="ion-ios7-gear-outline">插件</a>
+    <a class="ion-ios7-person-outline">关于</a>
+</footer>
+</body>
+</html>
+<script>
+    cui.config({
+        delay:300,//页面跳转滑动时间毫秒
+        index: {
+            page:"index",
+            url: "page/#page#",//初始化页面
+            data: {}//初始化页面要传递的参数
+        },
+        version: 1002,
+        //版本号 通过改变版本号
+        //可以清除缓存
+        //当系统有html css js文件
+        //变更的时候 修改version
+        debug:true
+        //调试模式打开则页面不缓存，
+        //否则页面会缓存
+    })
+</script>
