@@ -2935,7 +2935,7 @@ header > a {
 header > a:active{
     background-color: #50ade8;
 }
-header .cui-nav-button {
+header .dujo-nav-button {
     font-size: 32px;
     display: inline-block;
     font-family: Ionicons;
@@ -2948,13 +2948,13 @@ header .cui-nav-button {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-header .cui-nav-button:before {
+header .dujo-nav-button:before {
     content: "\f20e";
     position: absolute;
     left: 10px;
     top: 9px;
 }
-header .cui-back-button {
+header .dujo-back-button {
     display: inline-block;
     font-family: Ionicons;
     font-style: normal;
@@ -2968,14 +2968,14 @@ header .cui-back-button {
     height: 100%;
     width: 100%;
 }
-header .cui-back-button:before {
+header .dujo-back-button:before {
     font-size: 22px;
     position: absolute;
     left: 10px;
     top: 14px;
     content: "\f124";
 }
-header .cui-more-button {
+header .dujo-more-button {
     display: inline-block;
     font-family: Ionicons;
     font-style: normal;
@@ -2987,7 +2987,7 @@ header .cui-more-button {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-header .cui-more-button:before {
+header .dujo-more-button:before {
     font-size: 20px;
     position: absolute;
     right: 15px;
@@ -3006,7 +3006,7 @@ header h1 {
     line-height: 50px;
     margin: 0;
 }
-header h1 + .cui-nav-button:before {
+header h1 + .dujo-nav-button:before {
     right: 15px;
     left: auto;
 }
@@ -3061,7 +3061,7 @@ footer > a:before {
 }
 
 /***<jscompress sourcefile="messagae.css" />*/
-#cui-toast-container {
+#dujo-toast-container {
     z-index: 100;
     font-size: 13px;
     position: fixed;

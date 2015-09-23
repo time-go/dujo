@@ -8,9 +8,9 @@
 + 作者联系方式:qq289880020
 
 ##层次结构
-###cui.core.js  换掉了jquery的动画引擎
-###cui.page.js  页面管理
-###cui.ui.js、cui.css UI层
+###dujo.core.js  换掉了jquery的动画引擎
+###dujo.page.js  页面管理
+###dujo.ui.js、cui.css UI层
 
 ##API
 ###1.加载页面：cui.loadPage(url，programs,isHistory)                                       

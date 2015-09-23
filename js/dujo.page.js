@@ -159,7 +159,7 @@
         _debug = state;
     }
 })(window, jQuery);
-var cui = (function (w, $) {
+var dujo = (function (w, $) {
     //初始化css样式
     var _w = 0;
     var _h = 0;
@@ -172,8 +172,8 @@ var cui = (function (w, $) {
     var isHistory = true;
     $(function () {
         /*初始化css*/
-        var cuiCss = "body{border:0;padding:0;margin:0;position:relative}#webApp{border:0;padding:0;margin:0;position:relative;overflow:hidden;margin-left:0}.cui-page{border:0;padding:0;margin:0;position:absolute;top:0;left:0;z-index:1;overflow:hidden}.cui-webView{border:0;padding:0;margin:0;position:relative;overflow:auto}#cui-load{position:fixed;z-index:100000;top:0;left:0}";
-        $("<style></style>").html(cuiCss).appendTo("head");
+        var dujoCss = "body{border:0;padding:0;margin:0;position:relative}#webApp{border:0;padding:0;margin:0;position:relative;overflow:hidden;margin-left:0}.dujo-page{border:0;padding:0;margin:0;position:absolute;top:0;left:0;z-index:1;overflow:hidden}.dujo-webView{border:0;padding:0;margin:0;position:relative;overflow:auto}#dujo-load{position:fixed;z-index:100000;top:0;left:0}";
+        $("<style></style>").html(dujoCss).appendTo("head");
         function loadscreen() {
             //获取屏幕长宽
             _w = $(w).width();
@@ -182,12 +182,12 @@ var cui = (function (w, $) {
             $("#webApp").height(_h);
             $("body").width(_w);
             $("body").height(_h);
-            $("#cui-load").width(_w);
-            $("#cui-load").height(_h);
-            $(".cui-page").width(_w);
-            $(".cui-page").height(_h);//cui-webView
-            $(".cui-webView").width(_w);
-            $(".cui-webView").height(_h);
+            $("#dujo-load").width(_w);
+            $("#dujo-load").height(_h);
+            $(".dujo-page").width(_w);
+            $(".dujo-page").height(_h);//dujo-webView
+            $(".dujo-webView").width(_w);
+            $(".dujo-webView").height(_h);
         }
 
         window.onresize = function () {//屏幕旋转
@@ -216,22 +216,22 @@ var cui = (function (w, $) {
     }
 
     var _load = function () {
-        $("body").append("<div id='cui-load'></div>");
-        $("#cui-load").width(_w);
-        $("#cui-load").height(_h);
+        $("body").append("<div id='dujo-load'></div>");
+        $("#dujo-load").width(_w);
+        $("#dujo-load").height(_h);
         $(window.document).bind("touchmove", function () {
             return false;
         });
     }
     var _destructor = function () {
-        $("#cui-load").remove();
+        $("#dujo-load").remove();
         $(window.document).unbind("touchmove");
     }
     var _startApp = function () {
         if (_indexUrl == 0 || _indexData == 0) {
             console.log("启动页未配置错误");
         } else {
-            cui.loadPage(_indexUrl, _indexData);
+            dujo.loadPage(_indexUrl, _indexData);
             //开场关闭动画，需终端提供API
         }
     }
@@ -318,7 +318,7 @@ var cui = (function (w, $) {
             }
         },
         loadPage: function () {//格式 url，参数 上一页是否计入开始
-            cui.lockScreen();//锁屏
+            dujo.lockScreen();//锁屏
             //动态化参数配置
             var url = "";
             var data = {};
@@ -344,11 +344,11 @@ var cui = (function (w, $) {
             }
             var page;
             page = require(_rootPage + url);
-            cui.unlockScreen();//解屏
-            var _element = $("<div class='cui-page'></div>");
+            dujo.unlockScreen();//解屏
+            var _element = $("<div class='dujo-page'></div>");
             _element.height(_h);
             _element.width(_w);
-            var mv = $("#webApp").find(".cui-page");
+            var mv = $("#webApp").find(".dujo-page");
             if (mv.length > 0) {
                 var zIndex = mv.last().css("zIndex") * 1 + 1;
                 _element.css("zIndex", zIndex).css("left", _w + "px");
@@ -403,8 +403,8 @@ var cui = (function (w, $) {
             }
             _curRecord = _element[0];
             page.pageInit(_element[0], data);
-            if ($.isFunction(cui.curPageUrl)) {
-                cui.curPageUrl(url);
+            if ($.isFunction(dujo.curPageUrl)) {
+                dujo.curPageUrl(url);
             }
         },
         getHistory: function (num) {
@@ -421,24 +421,24 @@ var cui = (function (w, $) {
             _history = [];
         },
         pageShow: function (callback) {
-            var _back = $("#webApp").find(".cui-page").last().find(".cui-back");
-            if (cui.hasHistory()) {
+            var _back = $("#webApp").find(".dujo-page").last().find(".dujo-back");
+            if (dujo.hasHistory()) {
                 _back.show();
                 _back.click(function () {
-                    cui.pageBack();
+                    dujo.pageBack();
                 });
             } else {
                 _back.hide();
             }
-            $("#webApp").find(".cui-webView").last().width(_w);
-            $("#webApp").find(".cui-webView").last().height(_h);
-            var mv = $("#webApp").find(".cui-page");
+            $("#webApp").find(".dujo-webView").last().width(_w);
+            $("#webApp").find(".dujo-webView").last().height(_h);
+            var mv = $("#webApp").find(".dujo-page");
             var _l = mv.length;
             if (_l > 1) {
                 mv.last().animate({
                     left: "0px"
                 }, _delay, function () {
-                    var _prevPage = $("#webApp").find(".cui-page:eq(" + (_l - 2) + ")");
+                    var _prevPage = $("#webApp").find(".dujo-page:eq(" + (_l - 2) + ")");
                     if (!isHistory) {
                         $(_prevPage).remove();
                     }
