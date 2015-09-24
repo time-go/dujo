@@ -1,5 +1,5 @@
 #Dujo
-###Dujo简介
+##Dujo简介
 
 >侧重解决移动端单页面应用页面管理的问题，并提供一批以用好用的UI组件帮助大家方便的应用html5 进行移动开发
 
@@ -52,7 +52,7 @@
 + callback 新的页面移除后执行回调，可以为空
 
 ###6.返回上一页：dujo.pageBack(callback)
-+callback旧的页面移除屏幕执行回调，可以为空
++ callback旧的页面移除屏幕执行回调，可以为空
                                                                      
 ###7.页面预加载：dujo.preLoad(arr)
 + arr 为数组如：["two","one"]
