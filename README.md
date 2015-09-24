@@ -29,7 +29,7 @@
         //否则页面会缓存
     })
 ##URL
-/index.html?page=two&name=张三
+###/index.html?page=two&name=张三
 + page要访问的页面
 + name 要传递的参数，这个可以传递多个参数
 ##系统API
