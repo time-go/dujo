@@ -347,7 +347,6 @@ var dujo = (function (w, $) {
             }
             var page;
             page = require(_rootPage + url);
-            dujo.unlockScreen();//解屏
             var _element = $("<div class='dujo-page'></div>");
             _element.height(_h);
             _element.width(_w);
@@ -446,9 +445,13 @@ var dujo = (function (w, $) {
                         $(_prevPage).remove();
                     }
                     if ($.isFunction(callback)) callback();
+
+                    dujo.unlockScreen();//解屏
                 })
             } else {
                 if ($.isFunction(callback)) callback();
+
+                dujo.unlockScreen();//解屏
             }
         },
         "pageBack": function () {
