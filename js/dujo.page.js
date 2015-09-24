@@ -282,9 +282,12 @@ var dujo = (function (w, $) {
             }
             if (!(data == null)) {
                 configure.index.data = JSON.parse(data);
+                for(var p in  configure.index.data){
+                    configure.index.data[p] =decodeURIComponent(configure.index.data[p]);
+                }
             }
             if (configure && configure.index.hasOwnProperty("data")) {
-                _indexData = configure.index.hasOwnProperty("data");
+                _indexData = configure.index["data"];
             } else {
                 _indexData = {};
             }
