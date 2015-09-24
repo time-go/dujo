@@ -12,8 +12,7 @@
 ###dujo.page.js  页面管理
 ###dujo.ui.js、dujo.css UI层
 ##页面配置
-<code>
-dujo.config({
+    dujo.config({
         delay:300,//页面跳转滑动时间毫秒
         index: {
             page:"one",//初始化的页面
@@ -29,7 +28,6 @@ dujo.config({
         //调试模式打开则页面不缓存，
         //否则页面会缓存
     })
-</code>
 ##URL
 /index.html?page=two&name=张三
 + page要访问的页面
