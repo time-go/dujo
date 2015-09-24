@@ -29,24 +29,24 @@ dujo.config({
     })
 ##URL
 /index.html?page=two&name=张三
-+page要访问的页面
-+name 要传递的参数，这个可以传递多个参数
++ page要访问的页面
++ name 要传递的参数，这个可以传递多个参数
 ##系统API
 ###1.加载页面：dujo.loadPage(url，programs,isHistory)
-+url：加载页面地址
-+programs:压面传递的参数ru：{name:"张三"}
-+isHistory当前的页面是否加入历史，默认计入历史，如果不记录历史，择加载新的页面后，按返回按钮 不能返回的刚才的页面，回返回的上一页
-####2.锁定屏幕：dujo.lockScreen()                                                                          
++ url：加载页面地址
++ programs:压面传递的参数ru：{name:"张三"}
++ isHistory当前的页面是否加入历史，默认计入历史，如果不记录历史，择加载新的页面后，按返回按钮 不能返回的刚才的页面，回返回的上一页
+###2.锁定屏幕：dujo.lockScreen()                                                                          
 ###3.解除锁定屏幕：dujo.unlockScreen()                                                               
 ###4.获取历史页面：dujo.getHistory(num)
 + num 从-1 开始 如果为-1 则为倒数第一页                                                          
 ###5. 显示页面：dujo.pageShow(callback)
-+callback 新的页面移除后执行回调，可以为空
++ callback 新的页面移除后执行回调，可以为空
 ###6.返回上一页：dujo.pageBack(callback)
 +callback旧的页面移除屏幕执行回调，可以为空                                                                     
 ###7.页面预加载：dujo.preLoad(arr)
-+arr 为数组如：["two","one"]                                                                      
++ arr 为数组如：["two","one"]                                                                      
 ###8.是否有历史页面：dujo.hasHistory()                                                                    
 ###9.样式：dujo-back
-+加入次样式的元素，有历史页面会自动显示，无历史页面会自动隐藏，并且点击该元素会返回上一页                                                                                              
++ 加入次样式的元素，有历史页面会自动显示，无历史页面会自动隐藏，并且点击该元素会返回上一页                                                                                              
 ###10.清除历史页面：dujo.clearHistory()  
