@@ -82,7 +82,7 @@
 + callback 点击确定执行的回调
 
 ###5.dujo.showPageLoad(element)
-+显示页面加载动画 element  要加载的页面元素见示例
++ 显示页面加载动画 element  要加载的页面元素见示例
 
 ###6.dujo.removePageLoad(element)
-+移除页面加载动画 element同上
++ 移除页面加载动画 element同上
