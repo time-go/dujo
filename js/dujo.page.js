@@ -456,3 +456,9 @@ var dujo = (function (w, $) {
         }
     }
 })(window, jQuery);
+jQuery(function(){
+    //ios下激活active
+    document.body.addEventListener('touchstart',
+        function () {
+        });
+})
