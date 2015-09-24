@@ -8,9 +8,9 @@
 + 作者联系方式:qq289880020
 
 ##层次结构
-###dujo.core.js  换掉了jquery的动画引擎
-###dujo.page.js  页面管理
-###dujo.ui.js、dujo.css UI层
++ ###dujo.core.js  换掉了jquery的动画引擎
++ ###dujo.page.js  页面管理
++ ###dujo.ui.js、dujo.css UI层
 ##页面配置
     dujo.config({
         delay:300,//页面跳转滑动时间毫秒
