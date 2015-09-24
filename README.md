@@ -64,3 +64,25 @@
 + 加入次样式的元素，有历史页面会自动显示，无历史页面会自动隐藏，并且点击该元素会返回上一页
                                                                                               
 ###10.清除历史页面：dujo.clearHistory()  
+
+##系统自带UI提供等方法
+
+###1.dujo.uiShowMessage("message")
++ 消息提示,message为小时内容
+
+###2.dujo.uiHideMsg()
++ 隐藏消息
+
+###3.dujo.uiMsg("message")
++ 显示消息 1.2s后显示,message为消息内容
+
+###4.dujo.confrim(info, style, callback)
++ info 消息内容
++ style 提示框样式 question success fail 三种样式
++ callback 点击确定执行的回调
+
+###5.dujo.showPageLoad(element)
++显示页面加载动画 element  要加载的页面元素见示例
+
+###6.dujo.removePageLoad(element)
++移除页面加载动画 element同上
