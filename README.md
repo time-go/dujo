@@ -68,13 +68,13 @@
 ##系统自带UI提供等方法
 
 ###1.dujo.uiShowMessage("message")
-+ 消息提示,message为小时内容
++ 消息提示,message为消息内容
 
 ###2.dujo.uiHideMsg()
 + 隐藏消息
 
 ###3.dujo.uiMsg("message")
-+ 显示消息 1.2s后显示,message为消息内容
++ 显示消息 1.2s后消失,message为消息内容
 
 ###4.dujo.confrim(info, style, callback)
 + info 消息内容
