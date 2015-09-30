@@ -94,6 +94,9 @@
                 } else {
                     _host = parent;
                 }
+                if (_host.indexOf("?") > -1) {
+                    _host = _host.substr(0, _host.indexOf("?"))
+                }
                 if (_host.indexOf("/") > -1) {
                     _host = _host.substr(0, _host.lastIndexOf("/") + 1);
                 } else {
@@ -282,8 +285,8 @@ var dujo = (function (w, $) {
             }
             if (!(data == null)) {
                 configure.index.data = JSON.parse(data);
-                for(var p in  configure.index.data){
-                    configure.index.data[p] =decodeURIComponent(configure.index.data[p]);
+                for (var p in  configure.index.data) {
+                    configure.index.data[p] = decodeURIComponent(configure.index.data[p]);
                 }
             }
             if (configure && configure.index.hasOwnProperty("data")) {
@@ -462,7 +465,7 @@ var dujo = (function (w, $) {
         }
     }
 })(window, jQuery);
-jQuery(function(){
+jQuery(function () {
     //ios下激活active
     document.body.addEventListener('touchstart',
         function () {
