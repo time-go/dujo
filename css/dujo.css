@@ -3,7 +3,6 @@
  */
 html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*清楚input蓝色边框*/
-    -webkit-overflow-scrolling: touch; /*开启滚动回弹*/
 }
 
 body {
@@ -11,6 +10,7 @@ body {
 }
 .dujo-webView {
     background-color: #f5f5f5;
+    -webkit-overflow-scrolling: touch; /*开启滚动回弹*/
 }
 
 .content {
