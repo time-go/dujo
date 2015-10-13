@@ -181,16 +181,11 @@ var dujo = (function (w, $) {
             //获取屏幕长宽
             _w = $(w).width();
             _h = $(w).height();
-            $("#webApp").width(_w);
-            $("#webApp").height(_h);
-            $("body").width(_w);
-            $("body").height(_h);
-            $("#dujo-load").width(_w);
-            $("#dujo-load").height(_h);
-            $(".dujo-page").width(_w);
-            $(".dujo-page").height(_h);//dujo-webView
-            $(".dujo-webView").width(_w);
-            $(".dujo-webView").height(_h);
+            $("#webApp").width(_w).height(_h);
+            $("body").width(_w).height(_h);
+            $("#dujo-load").width(_w).height(_h);
+            $(".dujo-page").width(_w).height(_h);
+            $(".dujo-webView").width(_w).height(_h);
         }
 
         window.onresize = function () {//屏幕旋转
@@ -470,4 +465,6 @@ jQuery(function () {
     document.body.addEventListener('touchstart',
         function () {
         });
+    //IOS下开启滚动回弹
+    $("body").css("-webkit-overflow-scrolling", "touch");
 })
